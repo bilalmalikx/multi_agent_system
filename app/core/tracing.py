@@ -1,5 +1,5 @@
 from langchain_openai import ChatOpenAI
-from app.core.settings import settings
+from app.core.config import settings
 
 def get_llm():
     llm = ChatOpenAI(
