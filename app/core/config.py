@@ -1,6 +1,6 @@
 from pydantic_settings import BaseSettings
 from dotenv import load_dotenv
-
+import os
 class Settings(BaseSettings):
     OPENAI_API_KEY: str = os.getenv("OPENAI_API_KEY")
     LANGSMITH_API_KEY: str = os.getenv("LANGSMITH_API_KEY")

@@ -1,8 +1,9 @@
 from app.core.tracing import get_llm
+from app.graph.state import AgentState
 
-def planner_agent(state):
+def planner_agent(state: AgentState) -> AgentState:
     llm = get_llm()
-    
+
     prompt = f"Create a plan for: {state['user_input']}"
     
     response = llm.invoke(prompt)

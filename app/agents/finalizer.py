@@ -1,6 +1,7 @@
 from app.core.tracing import get_llm
+from app.graph.state import AgentState
 
-def final_agent(state):
+def final_agent(state: AgentState) -> AgentState:
     llm = get_llm()
     prompt = f"""
     Plan: {state['plan']}
